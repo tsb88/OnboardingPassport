@@ -19,7 +19,9 @@ namespace OnboardingPassport
         ProgressBar pointsBar;
         ListView challengesList;
         ListView leaderboardsList;
-		protected override void OnCreate(Bundle savedInstanceState)
+        readonly string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbTest.db3");
+
+        protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.activity_main);

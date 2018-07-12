@@ -11,13 +11,28 @@ namespace OnboardingPassport
 	[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
 	public class MainActivity : AppCompatActivity
 	{
-
+        ProgressBar pointsBar;
+        ListView challengesList;
+        ListView leaderboardsList;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
-
 			SetContentView(Resource.Layout.activity_main);
+
+            pointsBar = FindViewById<ProgressBar>(Resource.Id.progressBar);
+            challengesList = FindViewById<ListView>(Resource.Id.listViewChallenges);
+            leaderboardsList = FindViewById<ListView>(Resource.Id.listViewLeaderboards);
 		}
+
+        public void loadChallengesList()
+        {
+
+        }
+
+        public void loadLeaderboardsList()
+        {
+
+        }
 	}
 }
 

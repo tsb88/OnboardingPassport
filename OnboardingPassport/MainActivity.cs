@@ -11,9 +11,9 @@ namespace OnboardingPassport
 	[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
 	public class MainActivity : AppCompatActivity
 	{
-        ProgressBar pointsBar;
-        ListView challengesList;
-        ListView leaderboardsList;
+        ProgressBar pointsBar; //progress bar
+        ListView challengesList; //list of challenges
+        ListView leaderboardsList; //list of leaderboards
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);

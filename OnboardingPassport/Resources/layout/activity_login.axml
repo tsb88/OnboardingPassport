@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOTBot"
+        android:layout_marginBottom="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp" />
+    <ImageView
+        android:id="@+id/ups_logo"
+        android:layout_width="150dp"
+        android:layout_height="167.5dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+        android:src="@mipmap/ups_logo" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="15dp"
+        android:gravity="center">
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="#000"
+            android:textColorHint="#c1bfba"
+            android:id="@+id/loginUsername"
+            android:hint="Enter ADID"
+            android:background="@mipmap/login_edit"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp" />
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="#c1bfba"
+            android:textColor="#000"
+            android:id="@+id/loginPassword"
+            android:hint="Enter Password"
+            android:background="@mipmap/login_edit"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp" />
+    </LinearLayout>
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Login"
+        android:id="@+id/loginButton"
+        android:background="@mipmap/login" />
+</LinearLayout>

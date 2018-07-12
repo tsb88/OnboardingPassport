@@ -16,6 +16,8 @@ namespace OnboardingPassport
     
 	public class MainActivity : AppCompatActivity
 	{
+        // This comment is from branch_Tejas
+
         ProgressBar pointsBar;
         ListView challengesList;
         ListView leaderboardsList;

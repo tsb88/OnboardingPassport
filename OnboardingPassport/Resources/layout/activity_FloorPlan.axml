@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="#E0A51B">
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imageVIEW"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:background="@mipmap/floor1"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/btnZoom_In"
+            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:text="StartZoomIn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="40dp" />
+        <Button
+            android:id="@+id/btn_Zoom_out"
+            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:text="StartZoomOut"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="40dp" />
+    </LinearLayout>
+</RelativeLayout>

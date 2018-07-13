@@ -8,6 +8,7 @@ using Android.Views;
 using System.IO;
 using SQLite;
 using Android.Content;
+using OnboardingPassport.Resources.mipmap_xxxhdpi;
 
 namespace OnboardingPassport
 {
@@ -30,6 +31,8 @@ namespace OnboardingPassport
 
             Intent intent = new Intent(this, typeof(MainActivity));
             string ADIDRecived = intent.GetStringExtra("ADID");
+            intent = new Intent(this, typeof(FloorPlanActivity));
+            StartActivity(intent);
 
             var db = new SQLite.SQLiteConnection(dbPath);
             db.CreateTable<MainActivityDataBase>();

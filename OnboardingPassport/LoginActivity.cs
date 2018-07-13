@@ -12,6 +12,8 @@ using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using SQLite;
+using Android.Util;
 
 namespace OnboardingPassport.Resources.layout
 {
@@ -21,8 +23,9 @@ namespace OnboardingPassport.Resources.layout
         EditText loginUsername;
         EditText loginPassword;
         Button loginButton;
+        Button add;
 
-        readonly string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbTest.db3");
+        readonly string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "LoginDataBase.db3");
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -32,40 +35,52 @@ namespace OnboardingPassport.Resources.layout
             loginUsername = FindViewById<EditText>(Resource.Id.loginUsername);
             loginPassword = FindViewById<EditText>(Resource.Id.loginPassword);
             loginButton = FindViewById<Button>(Resource.Id.loginButton);
+            add = FindViewById<Button>(Resource.Id.add);
 
-            var db = new SQLite.SQLiteConnection(dbPath);
+            var db = new SQLiteConnection(dbPath);
             db.CreateTable<LoginDataBase>();
 
             loginButton.Click += LoginButton_Click;
+
+            add.Click += delegate
+            {
+                //setup connection
+                //var db = new SQLiteConnection(dbPath);
+
+                ////setup table
+                //db.CreateTable<Contact>();
+
+                //create new contact obj
+                LoginDataBase myContact = new LoginDataBase("YYG9ZZG", "TempPassword1");
+                db.Insert(myContact);
+                LoginDataBase myContact1 = new LoginDataBase("WYV1JGF", "TempPassword2");
+                db.Insert(myContact1);
+                LoginDataBase myContact3 = new LoginDataBase("ANT1ANT", "TempPassword2");
+                db.Insert(myContact3);
+            };
         }
+
         // testing upload
         private void LoginButton_Click(object sender, EventArgs e)
         {
             string ADID = loginUsername.Text;
             string Password = loginPassword.Text;
 
-            var db = new SQLite.SQLiteConnection(dbPath);
+            var db = new SQLiteConnection(dbPath);
             var table = db.Table<LoginDataBase>();
-            var CheckPass = db.Query<LoginDataBase>("SELECT * FROM LoginDataBase");
+            var CheckPass = db.Query<LoginDataBase>("SELECT * FROM LoginDataBase WHERE ADID = ?", ADID);
 
             foreach (var item in CheckPass)
             {
-                if (item.ADID == ADID)
+                if (item.Password == Password)
                 {
-                    if (item.Password == Password)
-                    {
-                        Intent intent = new Intent(this, typeof(MainActivity));
-                        intent.PutExtra("ADID", ADID);
-                        StartActivity(intent);
-                    }
-                    else
-                    {
-                        Toast.MakeText(this, "Incorrect ADID or Password", ToastLength.Long).Show();
-                    }
+                    Intent intent = new Intent(this, typeof(MainActivity));
+                    intent.PutExtra("ADID", ADID);
+                    StartActivity(intent);
                 }
                 else
                 {
-                    Toast.MakeText(this, "No user found", ToastLength.Long).Show();
+                    Toast.MakeText(this, "Incorect Information", ToastLength.Long).Show();
                 }
             }
         }

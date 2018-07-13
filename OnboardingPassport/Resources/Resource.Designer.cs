@@ -2346,7 +2346,7 @@ namespace OnboardingPassport
 			
 			// aapt resource value: 0x7f080037
 			public const int SYM = 2131230775;
-			
+		
 			// aapt resource value: 0x7f0800a7
 			public const int action0 = 2131230887;
 			
@@ -2460,7 +2460,7 @@ namespace OnboardingPassport
 			
 			// aapt resource value: 0x7f080073
 			public const int checkbox = 2131230835;
-			
+
 			// aapt resource value: 0x7f0800b0
 			public const int chronometer = 2131230896;
 			
@@ -2478,7 +2478,7 @@ namespace OnboardingPassport
 			
 			// aapt resource value: 0x7f080066
 			public const int contentPanel = 2131230822;
-			
+      
 			// aapt resource value: 0x7f080099
 			public const int coordinator = 2131230873;
 			
@@ -2494,6 +2494,7 @@ namespace OnboardingPassport
 			// aapt resource value: 0x7f080060
 			public const int default_activity_button = 2131230816;
 			
+
 			// aapt resource value: 0x7f08009b
 			public const int design_bottom_sheet = 2131230875;
 			
@@ -2517,7 +2518,7 @@ namespace OnboardingPassport
 			
 			// aapt resource value: 0x7f080030
 			public const int end = 2131230768;
-			
+
 			// aapt resource value: 0x7f0800b6
 			public const int end_padder = 2131230902;
 			
@@ -2571,7 +2572,7 @@ namespace OnboardingPassport
 			
 			// aapt resource value: 0x7f08005f
 			public const int image = 2131230815;
-			
+
 			// aapt resource value: 0x7f08008b
 			public const int imageVIEW = 2131230859;
 			
@@ -2617,7 +2618,6 @@ namespace OnboardingPassport
 			// aapt resource value: 0x7f08008f
 			public const int loginUsername = 2131230863;
 			
-			// aapt resource value: 0x7f0800b9
 			public const int masked = 2131230905;
 			
 			// aapt resource value: 0x7f0800aa
@@ -2634,7 +2634,7 @@ namespace OnboardingPassport
 			
 			// aapt resource value: 0x7f080028
 			public const int multiply = 2131230760;
-			
+
 			// aapt resource value: 0x7f08009e
 			public const int navigation_header_container = 2131230878;
 			
@@ -2682,7 +2682,7 @@ namespace OnboardingPassport
 			
 			// aapt resource value: 0x7f08004a
 			public const int right = 2131230794;
-			
+
 			// aapt resource value: 0x7f0800b2
 			public const int right_icon = 2131230898;
 			
@@ -2749,6 +2749,9 @@ namespace OnboardingPassport
 			// aapt resource value: 0x7f08008a
 			public const int select_dialog_listview = 2131230858;
 			
+			// aapt resource value: 0x7f0800b7
+			public const int settings = 2131230903;
+			
 			// aapt resource value: 0x7f080074
 			public const int shortcut = 2131230836;
 			
@@ -2790,7 +2793,7 @@ namespace OnboardingPassport
 			
 			// aapt resource value: 0x7f08004b
 			public const int start = 2131230795;
-			
+
 			// aapt resource value: 0x7f0800a9
 			public const int status_bar_latest_event_content = 2131230889;
 			
@@ -2817,7 +2820,7 @@ namespace OnboardingPassport
 			
 			// aapt resource value: 0x7f080069
 			public const int textSpacerNoTitle = 2131230825;
-			
+
 			// aapt resource value: 0x7f0800a3
 			public const int text_input_password_toggle = 2131230883;
 			
@@ -2826,7 +2829,7 @@ namespace OnboardingPassport
 			
 			// aapt resource value: 0x7f080015
 			public const int textinput_error = 2131230741;
-			
+
 			// aapt resource value: 0x7f0800af
 			public const int time = 2131230895;
 			
@@ -2838,7 +2841,7 @@ namespace OnboardingPassport
 			
 			// aapt resource value: 0x7f08006f
 			public const int title_template = 2131230831;
-			
+
 			// aapt resource value: 0x7f080092
 			public const int toolbar = 2131230866;
 			
@@ -2880,7 +2883,7 @@ namespace OnboardingPassport
 			
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
-			
+
 			// aapt resource value: 0x7f0800b8
 			public const int visible = 2131230904;
 			

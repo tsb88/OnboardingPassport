@@ -15,12 +15,14 @@ namespace OnboardingPassport
     class MainActivityDataBase
     {
         public string ADID { get; set; }
-        public string Points { get; set; }
+        public string EventName { get; set; }
+        public int Points { get; set; }
 
 
-        public MainActivityDataBase(string id, string points)
+        public MainActivityDataBase(string id, string eventName, int points)
         {
             ADID = id;
+            EventName = eventName;
             Points = points;
         }
 
@@ -28,11 +30,23 @@ namespace OnboardingPassport
         {
 
         }
+    }
+
+    class Events
+    {
+        public string EventName { get; set; }
+        public int Points { get; set; }
 
 
-        //public override string ToString()
-        //{
-        //    return SenderID + " " + Content;
-        //}
+        public Events(string eventName, int points)
+        {
+            EventName = eventName;
+            Points = points;
+        }
+
+        public Events()
+        {
+
+        }
     }
 }

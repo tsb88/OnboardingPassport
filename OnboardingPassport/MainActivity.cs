@@ -11,7 +11,7 @@ using Android.Content;
 
 namespace OnboardingPassport
 {
-	[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+	[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
 
     
 	public class MainActivity : AppCompatActivity
@@ -23,7 +23,7 @@ namespace OnboardingPassport
         Toolbar toolbar;
         int Adder = 0;
 
-        readonly string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbTest.db3");
+        readonly string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "MainActivityDataBase.db3");
 
         protected override void OnCreate(Bundle savedInstanceState)
 		{

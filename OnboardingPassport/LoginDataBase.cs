@@ -21,7 +21,7 @@ namespace OnboardingPassport
         public LoginDataBase(string id, string password)
         {
             ADID = id;
-            Password = Password;
+            Password = password;
         }
 
         public LoginDataBase()
